@@ -1,0 +1,144 @@
+
+1. Dasar jaringan
+
+Host : Perangkat yang terhubung ke jaringan dan memiliki IP Address.
+
+
+Network : Sekumpulan host yang dapat saling berkomunikasi.
+
+
+LAN (Local Area Network) : Jaringan dalam area lokal, misalnya rumah, kantor, atau kampus.
+
+
+WAN (Wide Area Network) : Jaringan yang menghubungkan beberapa LAN dalam wilayah yang lebih luas.
+
+
+Packet : Protocol Data Unit (PDU) pada Layer 3 yang membawa IP Address sumber dan tujuan.
+
+
+Frame : PDU pada Layer 2 yang membawa MAC Address sumber dan tujuan.
+
+
+Segment : PDU pada Layer 4 (TCP).
+
+
+
+
+
+2. Layer 2 (Switching)
+
+MAC Address : Alamat fisik unik milik NIC.
+
+
+Switch : Perangkat Layer 2 yang meneruskan frame berdasarkan MAC Address.
+
+
+MAC Address Table : Tabel yang berisi pasangan MAC Address dan interface switch.
+
+
+Flooding : Switch mengirim frame ke semua port dalam satu VLAN karena belum mengetahui MAC Address tujuan.
+
+
+Broadcast : Frame yang dikirim ke seluruh host dalam satu broadcast domain.
+
+
+Broadcast Domain : Sekelompok perangkat yang menerima broadcast yang sama.
+
+
+Collision Domain : Area tempat collision Ethernet dapat terjadi (pada switch modern setiap port merupakan collision domain sendiri).
+
+
+ARP : Protokol Layer 2/Layer 3 yang digunakan untuk mengetahui MAC Address berdasarkan IP Address.
+
+
+ARP Table : Daftar pasangan IP Address dan MAC Address yang sudah diketahui.
+
+
+
+
+3. IPv4 and subnetting
+
+IPv4 Address : Alamat logis 32-bit.
+
+
+Network Portion : Bagian IP yang mengidentifikasi jaringan.
+
+
+Host Portion : Bagian IP yang mengidentifikasi host.
+
+
+Subnet Mask : Menentukan batas antara Network Portion dan Host Portion.
+
+
+Prefix Length : Jumlah bit Network Portion.
+
+
+
+4. Routing 
+
+Router : Perangkat Layer 3 yang meneruskan packet antar jaringan.
+
+
+Default Gateway : Alamat router yang digunakan host untuk keluar subnet.
+
+
+Routing Table : Daftar jalur menuju berbagai network.
+
+
+Static Route : Rute yang dibuat manual.
+
+
+Dynamic Routing : Rute dipelajari menggunakan protokol routing.
+
+
+
+5. VLAN
+
+VLAN (Virtual LAN) : Teknologi Layer 2 yang membagi satu switch menjadi beberapa broadcast domain.
+
+
+Access Port : Port yang hanya membawa satu VLAN.
+
+
+Trunk Port : Port yang membawa banyak VLAN.
+
+
+Native VLAN : VLAN yang dikirim melalui trunk tanpa tag 802.1Q.
+
+
+802.1Q : Standar IEEE untuk memberi VLAN tag pada Ethernet Frame.
+
+
+VLAN Tag : Informasi VLAN ID yang disisipkan ke Ethernet Header.
+
+
+VLAN ID : Nomor identitas VLAN.
+
+
+Inter-VLAN Routing : Komunikasi antar VLAN menggunakan perangkat Layer 3.
+
+
+Router-on-a-Stick (ROAS) : Metode inter-VLAN routing menggunakan satu interface fisik router dengan beberapa subinterface.
+
+
+Subinterface : Interface logis pada router yang mewakili satu VLAN.
+
+
+Layer 3 Switch : Switch yang mampu melakukan switching sekaligus routing.
+
+
+SVI (Switch Virtual Interface) : Interface virtual pada Layer 3 Switch yang berfungsi sebagai gateway VLAN.
+
+
+
+6. DTP (Dynamic Trunking Protocol) : Protokol Cisco yang melakukan negosiasi agar link menjadi trunk.
+
+VTP (VLAN Trunking Protocol) : Protokol Cisco untuk menyebarkan informasi VLAN antar switch.
+
+VTP Server : Switch yang mengelola database VLAN.
+
+VTP Client : Switch yang menerima database VLAN dari Server.
+
+VTP Transparent : Switch yang tidak ikut menyinkronkan database VLAN, tetapi tetap meneruskan pesan VTP.
+
+Revision Number : Nomor versi database VLAN pada VTP.
