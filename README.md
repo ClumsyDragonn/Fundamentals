@@ -1,3 +1,3 @@
 ## About this repository
 
-i make this repo for my documentation what i learned.
+i make this repo for my documentating what i learned.
